@@ -7,7 +7,7 @@ import { CustomButton } from '../../components/custom-button'
 import { Link } from 'react-router-dom'
 import { Paths } from '../../paths'
 
-const Register = () => {
+export const Register = () => {
   return (
     <Layout>
       <Row align="middle" justify="center">
@@ -31,5 +31,3 @@ const Register = () => {
     </Layout>
   )
 }
-
-export default Register

@@ -11,13 +11,16 @@ import { ConfigProvider, theme } from 'antd'
 import { Paths } from './paths';
 
 import { Login } from './pages/login';
-import Register from './pages/register';
+import { Register } from './pages/register';
+import { Employees } from './pages/employees';
+import { AddEmployee } from './pages/add-employee';
+import { Status } from './pages/status';
 import { Auth } from './features/auth/auth';
 
 const router = createBrowserRouter([
   {
     path: Paths.home,
-    element: <h1>Hello!</h1>
+    element: <Employees />
   },
   {
     path: Paths.login,
@@ -26,6 +29,14 @@ const router = createBrowserRouter([
   {
     path: Paths.register,
     element: <Register />
+  },
+  {
+    path: Paths.employeeAdd,
+    element: <AddEmployee />
+  },
+  {
+    path: `${Paths.status}/:status`,
+    element: <Status />
   },
 ])
 
